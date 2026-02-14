@@ -1,0 +1,218 @@
+.section {
+    padding-block: 3rem;
+    background: var(--background);
+}
+
+.grid {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+.card {
+    background: color-mix(in oklch, var(--card) 96%, transparent);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 0.5rem);
+    padding: 1.5rem;
+}
+}
+
+.title {
+    margin: 0;
+    color: var(--foreground);
+    font-weight: 900;
+.formHeader {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+.formTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+}
+.formSubtitle {
+    margin: 0.5rem 0 0;
+    color: var(--muted-foreground);
+}
+    letter-spacing: -0.03em;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    line-height: 1.2;
+}
+
+.subtitle {
+    margin: 0.6rem 0 0;
+    color: var(--muted-foreground);
+    line-height: 1.65;
+    max-width: 65ch;
+}
+.select {
+    width: 100%;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.form {
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: var(--muted);
+    padding: 1.15rem;
+.fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.legend {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    margin-bottom: 0.5rem;
+}
+.radioGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+.radioPill {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0.8rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 0.25rem);
+    background: var(--background);
+    cursor: pointer;
+    font-weight: 700;
+}
+.radioPill input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.radioPillInner {
+    width: 100%;
+    text-align: center;
+}
+
+.radioPill input:checked + .radioPillInner {
+    border-radius: calc(var(--radius) + 0.25rem);
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+}
+}
+
+.fields {
+.submit {
+    width: 100%;
+}
+.privacy {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+    text-align: center;
+    line-height: 1.4;
+}
+    display: grid;
+    gap: 0.85rem;
+}
+
+.field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.label {
+    font-weight: 800;
+    color: var(--foreground);
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.85rem;
+.card {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+    border: 1px solid var(--input);
+    font-size: 1rem;
+}
+
+.input:focus-visible {
+    outline: 0.2rem solid var(--ring);
+    outline-offset: 0.15rem;
+}
+
+.help {
+    margin: 0;
+    color: var(--muted-foreground);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.error {
+    margin: 0;
+    color: var(--destructive);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.success {
+    margin: 0;
+    color: var(--foreground);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.actions {
+    margin-top: 1rem;
+}
+
+.aside {
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    background: var(--card);
+    padding: 1.15rem;
+}
+
+.asideTitle {
+    margin: 0;
+    font-weight: 900;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+}
+
+.asideList {
+    margin: 0.75rem 0 0;
+    padding-left: 1.15rem;
+    color: var(--muted-foreground);
+}
+
+.asideList li {
+    margin-block: 0.35rem;
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1025px) {
+    .section {
+        padding-block: 4rem;
+    }
+    .grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    .form,
+    .aside {
+        padding: 1.5rem;
+    }
+}

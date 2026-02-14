@@ -24,7 +24,7 @@ class UserMiddleware
                 ], 401);
             }
 
-            return redirect()->route('auth.login')->with('error', 'Please login to access this page');
+            return redirect()->route('login')->with('error', 'Please login to access this page');
         }
 
         // Check if authenticated user has user role or admin role

@@ -1,0 +1,32 @@
+.wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 50;
+    padding-inline: 1rem;
+}
+
+.button {
+    width: 100%;
+    max-width: 26rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 950;
+    text-decoration: none;
+    border: 1px solid color-mix(in oklch, var(--chart-2) 45%, transparent);
+    background: color-mix(in oklch, var(--chart-2) 55%, transparent);
+    color: color-mix(in oklch, white 96%, transparent);
+    box-shadow: 0 12px 30px color-mix(in oklch, black 30%, transparent);
+}
+
+@media (min-width: 769px) {
+    .wrap {
+        display: none;
+    }
+}

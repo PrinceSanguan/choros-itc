@@ -41,4 +41,21 @@ return [
         'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
 
+    'google_sheets' => [
+        'web_app_url' => env('GOOGLE_SHEETS_WEB_APP_URL'),
+        'breakdown_url' => env('GOOGLE_SHEETS_BREAKDOWN_URL'),
+        'secret' => env('GOOGLE_SHEETS_WEB_APP_SECRET'),
+    ],
+
+    'ghl' => [
+        'webhook_url' => env('GHL_WEBHOOK_URL'),
+        'webhook_url_2' => env('GHL_WEBHOOK_URL_2'),
+    ],
+
+    'twilio' => [
+        'sid' => env('TWILIO_ACCOUNT_SID'),
+        'token' => env('TWILIO_AUTH_TOKEN'),
+        'from' => env('TWILIO_FROM_NUMBER'),
+    ],
+
 ];

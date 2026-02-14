@@ -104,7 +104,7 @@ class SocialAuthController extends Controller
             if ($user->user_role === 'admin') {
                 return redirect()->route('admin.dashboard');
             } else {
-                return redirect()->route('user.dashboard')->with('email_status', session('email_sent') ? 'sent' : 'failed');
+                return redirect()->route('dashboard')->with('email_status', session('email_sent') ? 'sent' : 'failed');
             }
         } catch (Exception $e) {
             // Log the error with details

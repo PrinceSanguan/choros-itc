@@ -1,0 +1,170 @@
+.section {
+    padding-block: 4rem;
+    color: color-mix(in oklch, white 96%, transparent);
+    background:
+        radial-gradient(1200px 700px at 20% 30%, color-mix(in oklch, var(--chart-1) 30%, transparent), transparent 60%),
+        radial-gradient(1000px 600px at 80% 20%, color-mix(in oklch, var(--chart-4) 25%, transparent), transparent 55%),
+        linear-gradient(135deg, color-mix(in oklch, var(--foreground) 92%, transparent), color-mix(in oklch, var(--foreground) 75%, transparent));
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.left,
+.right {
+    min-width: 0;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.badgePremium {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    background: color-mix(in oklch, var(--chart-5) 65%, transparent);
+    color: color-mix(in oklch, var(--foreground) 88%, transparent);
+    border: 1px solid color-mix(in oklch, var(--chart-5) 35%, transparent);
+}
+
+.badgeSoft {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    background: color-mix(in oklch, white 16%, transparent);
+    border: 1px solid color-mix(in oklch, white 24%, transparent);
+    color: color-mix(in oklch, white 92%, transparent);
+}
+
+.title {
+    margin: 1.25rem 0 0.75rem;
+    font-size: clamp(2.25rem, 4vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 950;
+}
+
+.titleEmphasis {
+    display: block;
+    margin-top: 0.6rem;
+    color: color-mix(in oklch, var(--chart-5) 90%, white);
+}
+
+.subtitle {
+    color: color-mix(in oklch, white 90%, transparent);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+.trustRow {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.trustPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    background: color-mix(in oklch, white 12%, transparent);
+    border: 1px solid color-mix(in oklch, white 20%, transparent);
+    font-weight: 800;
+}
+
+.check {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: color-mix(in oklch, var(--chart-2) 55%, transparent);
+    color: color-mix(in oklch, white 96%, transparent);
+    font-weight: 950;
+    font-size: 0.9rem;
+}
+
+.ctaRow {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.callCta {
+    background: color-mix(in oklch, var(--chart-2) 65%, transparent);
+    border-color: color-mix(in oklch, var(--chart-2) 55%, transparent);
+    color: color-mix(in oklch, white 96%, transparent);
+}
+
+.quoteCta {
+    background: color-mix(in oklch, white 92%, transparent);
+    border-color: color-mix(in oklch, white 60%, transparent);
+    color: color-mix(in oklch, var(--foreground) 88%, transparent);
+}
+
+.socialProof {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid color-mix(in oklch, white 20%, transparent);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.divider {
+    width: 1px;
+    height: 2.5rem;
+    background: color-mix(in oklch, white 28%, transparent);
+}
+
+.stars {
+    color: color-mix(in oklch, var(--chart-5) 85%, white);
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.socialBig {
+    font-size: 1.75rem;
+    font-weight: 950;
+    line-height: 1;
+}
+
+.socialMeta {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: color-mix(in oklch, white 88%, transparent);
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 3rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .divider {
+        display: none;
+    }
+}

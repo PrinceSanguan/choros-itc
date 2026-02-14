@@ -57,10 +57,27 @@
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
         ],
+        "dev:win": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names=server,queue,vite"
+        ],
         "dev:ssr": [
             "npm run build:ssr",
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"php artisan inertia:start-ssr\" --names=server,queue,logs,ssr"
+        ],
+        "dev:ssr:win": [
+            "npm run build:ssr",
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan inertia:start-ssr\" --names=server,queue,ssr"
+        ],
+        "lighthouse:prep": [
+            "npm run build",
+            "@php -r \"$p='public/hot'; if (file_exists($p)) { unlink($p); }\""
+        ],
+        "lighthouse:run": [
+            "npx lighthouse http://127.0.0.1:8000/ --preset=mobile --only-categories=performance,best-practices --output=html --output=json --output-path=storage/app/lighthouse.mobile",
+            "npx lighthouse http://127.0.0.1:8000/ --preset=desktop --only-categories=performance,best-practices --output=html --output=json --output-path=storage/app/lighthouse.desktop"
         ]
     },
     "extra": {

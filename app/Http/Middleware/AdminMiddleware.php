@@ -27,7 +27,7 @@ class AdminMiddleware
             }
 
             // Redirect to login with error message
-            return redirect()->route('auth.login')
+            return redirect()->route('login')
                 ->with('error', 'Please login to access this page');
         }
 

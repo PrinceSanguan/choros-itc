@@ -1,0 +1,46 @@
+.section {
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    padding-block: 1.25rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem 1.25rem;
+}
+
+.item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: color-mix(in oklch, var(--card) 92%, transparent);
+    font-weight: 800;
+    color: var(--foreground);
+}
+
+.icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: color-mix(in oklch, var(--muted) 80%, transparent);
+    color: var(--foreground);
+    font-size: 0.95rem;
+}
+
+.text {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+    .text {
+        font-size: 0.9rem;
+    }
+}

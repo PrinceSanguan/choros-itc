@@ -28,11 +28,11 @@ class GuestMiddleware
                 if ($user->user_role === 'admin') {
                     return redirect()->route('admin.dashboard');
                 } elseif ($user->user_role === 'user') {
-                    return redirect()->route('user.dashboard');
+                    return redirect()->route('dashboard');
                 }
 
                 // Default dashboard for any authenticated user
-                return redirect()->route('user.dashboard');
+                return redirect()->route('dashboard');
             }
         }
 

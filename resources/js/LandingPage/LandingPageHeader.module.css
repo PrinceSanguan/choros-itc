@@ -1,0 +1,54 @@
+.wrap {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in oklab, var(--background) 86%, transparent);
+    backdrop-filter: none;
+    border-bottom: 1px solid var(--border);
+}
+
+@supports (backdrop-filter: blur(1px)) {
+    .wrap {
+        backdrop-filter: blur(0.6rem);
+    }
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.85rem;
+    gap: 1rem;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--foreground);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.skip {
+    position: absolute;
+    left: -9999px;
+    top: 0.25rem;
+    background: var(--foreground);
+    color: var(--background);
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.75rem;
+    z-index: 50;
+}
+
+.skip:focus {
+    left: 0.75rem;
+}
+
