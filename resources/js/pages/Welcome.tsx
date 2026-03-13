@@ -4,7 +4,6 @@ import LandingPageHeader from '@/LandingPage/LandingPageHeader';
 import TrustStripSection from '@/LandingPage/TrustStripSection';
 import WhyChooseUsSection from '@/LandingPage/WhyChooseUsSection';
 import BoilerOptionsSection from '@/LandingPage/BoilerOptionsSection';
-import WhyUsDetailedSection from '@/LandingPage/WhyUsDetailedSection';
 import TestimonialsSection from '@/LandingPage/TestimonialsSection';
 import FAQSection from '@/LandingPage/FAQSection';
 import FinalCtaSection from '@/LandingPage/FinalCtaSection';
@@ -12,12 +11,11 @@ import MobileStickyCta from '@/LandingPage/MobileStickyCta';
 import LandingPageFooter from '@/LandingPage/LandingPageFooter';
 
 export default function Welcome() {
-    const pageTitle = 'New Boiler Installation | Boilers On-Demand | BN44 & Surrounding Areas';
-    const pageDescription =
-        'New Boiler Installation Clarity You Can Trust in BN44. From £2,200 – Fully Fitted. 35+ years experience. Same day service. £100 price beat guarantee. Gas Safe certified. Serving BN44 + 15 miles.';
-    const brandName = import.meta.env.VITE_APP_NAME || 'Boilers On-Demand';
-    const phone = '01903802395';
-    const phoneDisplay = '01903 802395';
+    const pageTitle = 'Fire Door Installation & Maintenance | ITC Contractors Coventry | FIRAS Accredited · 48 Hour Service';
+    const pageDescription = 'Expert fire door installation and maintenance in Coventry. FIRAS accredited, 10+ years experience, installed within 48 hours. Free quotes. Call ITC Contractors today.';
+    const brandName = 'ITC Contractors Coventry';
+    const phone = 'N/A';
+    const phoneDisplay = 'N/A';
 
     return (
         <>
@@ -32,11 +30,11 @@ export default function Welcome() {
 
             <main id="content">
                 <HeroSection
-                    badgeLeft="35+ Years Trusted"
-                    badgeRight="Gas Safe Certified"
-                    headlineTop="Expert Boiler Installation"
-                    headlineEmphasis="From £2,200"
-                    subheadline="Same day installation available. £100 price beat guarantee. First year service FREE. Serving BN44 + 15 miles."
+                    badgeLeft="FIRAS Accredited"
+                    badgeRight="10+ Years Experience"
+                    headlineTop="Fire Door Installation & Maintenance"
+                    headlineEmphasis="Coventry"
+                    subheadline="FIRAS-accredited fire door specialists. Installed within 48 hours of quote. Fully compliant with fire safety regulations. Free quotes available."
                     callPhone={phone}
                     callPhoneDisplay={phoneDisplay}
                     quoteCtaLabel="Get Free Quote"
@@ -44,206 +42,138 @@ export default function Welcome() {
                     formSubtitle="Free, no-obligation quote in 60 seconds"
                 />
 
-                <TrustStripSection
-                    items={[
-                        { iconLabel: '✓', title: '1000+ Happy Homeowners' },
-                        { iconLabel: '✓', title: 'Gas Safe Registered' },
-                        { iconLabel: '✓', title: '35+ Years Experience' },
-                        { iconLabel: '✓', title: 'Local BN44 Experts' },
-                    ]}
-                />
+                <TrustStripSection items={[
+                    { iconLabel: "✓", title: "48 Hour Installation" },
+                    { iconLabel: "✓", title: "FIRAS Accredited" },
+                    { iconLabel: "✓", title: "Finance Options Available" },
+                    { iconLabel: "✓", title: "Free Site Surveys" },
+                ]} />
 
                 <WhyChooseUsSection
                     eyebrow="Why Choose Us"
-                    title="Why Homeowners Choose"
-                    titleEmphasis="Boilers On-Demand"
-                    subtitle="Clear pricing. Professional installations. Honest advice built on 35+ years of local trust in BN44 and surrounding areas."
+                    title="Why Coventry Property Owners Choose"
+                    titleEmphasis="ITC Contractors"
+                    subtitle="Over 10 years protecting homes, schools, hospitals, and commercial buildings across Coventry with fully compliant fire door solutions"
                     primaryCtaLabel="Get Your Free Quote"
                     phone={phone}
                     cards={[
                         {
-                            title: 'Fixed Price Guarantee',
-                            description: 'No hidden costs or surprises. What you see in your quote is exactly what you pay. Everything included.',
+                            title: 'FIRAS Accredited Installers',
+                            description: 'We are FIRAS-accredited installers ensuring your fire door installation meets the highest safety standards and full regulatory compliance.',
                         },
                         {
-                            title: '5-Star Service',
-                            description: 'Dedicated support from quote to completion. Our team is here to help every step of the way.',
+                            title: '48 Hour Installation Service',
+                            description: 'Fire doors installed within 48 hours of quote. We understand urgent fire safety requirements and minimise downtime for your property.',
                         },
                         {
-                            title: 'Flexible Finance',
-                            description: 'Finance options available for a range of budgets. We keep the process clear and straightforward.',
+                            title: 'Finance Options Available',
+                            description: 'Spread the cost with interest-free finance options available. Make fire safety compliance affordable for your property.',
                         },
                         {
-                            title: '12 Year Warranty',
-                            description: 'Up to 12 year manufacturer warranty plus our workmanship guarantee on every install.',
-                        },
-                        {
-                            title: 'Same Day Install',
-                            description: 'Get your quote quickly. Installation available same day or next day when urgent.',
-                        },
-                        {
-                            title: 'Premium Brands',
-                            description: 'Worcester Bosch, Vaillant, Ideal Logic — trusted brands for long-lasting performance.',
+                            title: 'Comprehensive Maintenance Plans',
+                            description: 'Regular fire door maintenance ensures ongoing compliance. Our expert team inspects, services, and provides detailed reports for complete peace of mind.',
                         },
                     ]}
                 />
 
                 <BoilerOptionsSection
-                    eyebrow="Our Boilers"
-                    title="Installed as Fast as"
-                    titleEmphasis="Next Day"
-                    subtitle="Choose the boiler that fits your home and budget. Clear options, fixed pricing, and a simple quote process."
+                    eyebrow="Our Services"
+                    title="What We Offer"
+                    titleEmphasis="ITC Contractors Coventry"
+                    subtitle="Professional services across . All makes and models covered."
                     options={[
-                        {
-                            label: 'POPULAR',
-                            brand: 'Worcester Bosch',
-                            model: '1000 25kW Combi',
-                            priceFrom: '£2,200',
-                            warranty: '10-Year Warranty',
-                            bullets: ['A-rated efficiency for lower bills', 'QuickTap technology', 'Ideal for fast installs', 'Reliable performance'],
-                        },
-                        {
-                            brand: 'Ideal Logic',
-                            model: 'Max Combi',
-                            priceFrom: '£2,400',
-                            warranty: '10-Year Warranty',
-                            bullets: ['Long-term peace of mind', 'Clear LCD display', 'Frost protection included', 'Great for family homes'],
-                        },
-                        {
-                            label: 'PREMIUM',
-                            brand: 'Vaillant',
-                            model: 'EcoTec Pro 24',
-                            priceFrom: '£2,800',
-                            warranty: '12-Year Warranty',
-                            bullets: ['A-rated efficiency', 'Instant hot water comfort', 'Ultra-quiet operation', 'Long-term reliability'],
-                        },
+                    {
+                        brand: 'Fire Door Installation',
+                        model: 'Professional FIRAS-accredited fire door installation for com',
+                        priceFrom: 'Contact for Quote',
+                        warranty: 'All work guaranteed',
+                        bullets: ["FIRAS accredited installation", "Installed within 48 hours of quote", "Full compliance with fire safety regulations", "Hospitals, schools, commercial buildings"],
+                    },
+                    {
+                        brand: 'Fire Door Maintenance',
+                        model: 'Regular maintenance and inspection services to ensure your f',
+                        priceFrom: 'Contact for Quote',
+                        warranty: 'All work guaranteed',
+                        bullets: ["Thorough inspection of all components", "Seals, hinges, and closing mechanisms checked", "Repairs and replacements as needed", "Detailed compliance report provided"],
+                    },
                     ]}
-                />
-
-                <WhyUsDetailedSection
-                    eyebrow="The Boilers On-Demand Difference"
-                    title="Buy Your New Boiler,"
-                    titleEmphasis="Better."
-                    subtitle="Fixed-price boilers with everything included. 35+ years of local trust in BN44 and surrounding areas."
-                    cards={[
-                        {
-                            title: 'Fixed-Price Boilers — Everything Included',
-                            description:
-                                "From flues to thermostats, and pipework to paperwork — we focus on doing it right with no nasty surprises.",
-                            bullets: [
-                                'Premium flues and fittings',
-                                'Smart programmable thermostat',
-                                'All pipework, valves, and connections',
-                                'Complete Gas Safety certification',
-                                'Building Control notification',
-                                'Professional system flush',
-                            ],
-                            highlight: 'No unexpected charges. What you see is what you pay.',
-                        },
-                        {
-                            title: 'Gas Safe, Qualified Engineers',
-                            description:
-                                'Friendly, insured, qualified and highly skilled. Real engineers. Real standards. Real accountability.',
-                            bullets: [
-                                'Gas Safe engineers — fully certified and registered',
-                                'Fully insured — comprehensive coverage',
-                                'Local engineers — serving BN44 + 15 miles',
-                                'Clean, respectful, professional work',
-                            ],
-                        },
-                        {
-                            title: '£100 Price Beat Guarantee',
-                            description:
-                                "If you find a like-for-like price that's cheaper than we've quoted, we'll beat it by £100.",
-                            highlight: "We won't be beaten on price. That's our promise.",
-                        },
-                        {
-                            title: '12 Month Workmanship Warranty',
-                            description:
-                                "Every installation includes our workmanship warranty — because we're confident in our standards.",
-                            bullets: ['Neat, professional pipework', 'Secure fittings and connections', 'Proper system commissioning', 'Thorough testing and safety checks'],
-                        },
-                        {
-                            title: 'Save Up to £840 Per Year on Bills',
-                            description:
-                                'Replacing an old, inefficient boiler with a modern A-rated system can reduce energy costs significantly.',
-                            highlight: '£840+ saved yearly (typical scenario).',
-                            tone: 'accent',
-                        },
-                        {
-                            title: 'The Boilers On-Demand Difference',
-                            description:
-                                '35+ years serving local families. Thousands of successful installations. One simple principle: do the job right, charge fairly, treat every home with respect.',
-                            bullets: ['35+ Years Experience', 'Local BN44 Experts', 'Gas Safe Certified'],
-                            tone: 'inverted',
-                        },
-                    ]}
-                    ctaLabel="Get Your Fixed Price Quote Today"
-                    ctaNote="No hidden costs. No pushy sales. Just honest advice from local experts."
                 />
 
                 <TestimonialsSection
-                    eyebrow="Customer Reviews"
-                    title="What Our Customers"
-                    titleEmphasis="Say"
-                    ratingText="5.0 out of 5"
-                    subtitle="Based on 100+ Google reviews"
+                    eyebrow="What Our Customers Say"
+                    title="Trusted by Homeowners"
+                    titleEmphasis="Across "
+                    ratingText="170+ verified 5-star reviews"
+                    subtitle="Real reviews from real local customers."
                     testimonials={[
-                        {
-                            name: 'Sarah M.',
-                            location: 'Steyning, BN44',
-                            quote:
-                                'Excellent service from start to finish. Clean install, polite engineers, and my new boiler is perfect. Would highly recommend!',
-                        },
-                        {
-                            name: 'James P.',
-                            location: 'Henfield, BN5',
-                            quote:
-                                "Fixed price quote with no hidden costs. Boiler installed in one day. Couldn't be happier!",
-                        },
-                        {
-                            name: 'Daniel R.',
-                            location: 'BN44 Area',
-                            quote:
-                                'Professional, tidy, and great value. They beat my other quotes and the quality is outstanding.',
-                        },
+                    {
+                        name: 'Client Reviews',
+                        location: 'Coventry',
+                        quote: 'We have many 5-star reviews from satisfied customers across Coventry. Visit our Google Reviews or Facebook page to see what our clients say about our fire door installation and maintenance services.',
+                    },
+                    {
+                        name: 'Trusted Partner',
+                        location: 'CV & B Postcodes',
+                        quote: 'ITC Contractors have delivered fire protection services across various sectors including hospitals, schools, commercial buildings, hotels, and retail establishments throughout Coventry.',
+                    },
+                    {
+                        name: 'Local & Family Run',
+                        location: 'Coventry',
+                        quote: 'As a local, family-run business with over 10 years of experience, we provide tailored fire door solutions that meet your unique needs and budget while ensuring full regulatory compliance.',
+                    },
                     ]}
                 />
 
                 <FAQSection
-                    eyebrow="FAQs"
-                    title="Common Questions,"
-                    titleEmphasis="Clear Answers"
-                    subtitle="Everything you need to know before booking your boiler installation."
+                    eyebrow="Got Questions?"
+                    title="Frequently Asked Questions"
                     items={[
-                        {
-                            question: 'How long does a boiler installation take?',
-                            answer: 'Most installations are completed within one day. Where possible, we can also offer same-day or next-day installation.',
-                        },
-                        {
-                            question: 'Is the quote really fixed?',
-                            answer: 'Yes. The price you’re quoted is the price you pay — no hidden charges, no surprises.',
-                        },
-                        {
-                            question: 'Are your engineers Gas Safe registered?',
-                            answer: 'Absolutely. All installations are carried out by fully qualified, Gas Safe registered engineers.',
-                        },
+                    {
+                        question: 'How much does fire door installation cost in Coventry?',
+                        answer: 'Fire door installation costs vary depending on the type of door, location, and specific compliance requirements. Contact us for a free, no-obligation quote tailored to your property. We offer competitive pricing and finance options to spread the cost.',
+                    },
+                    {
+                        question: 'How quickly can you install a fire door?',
+                        answer: 'We install fire doors within 48 hours of providing your quote. We understand that fire safety compliance is often urgent, and we work efficiently to minimise downtime for your property.',
+                    },
+                    {
+                        question: 'Are you FIRAS accredited?',
+                        answer: 'Yes, ITC Contractors are FIRAS-accredited installers. This ensures your fire door installation meets the highest safety standards and complies fully with UK fire safety regulations.',
+                    },
+                    {
+                        question: 'Do you offer finance for fire door installation?',
+                        answer: 'Yes, we offer interest-free finance options to help spread the cost of fire door installation. This makes essential fire safety compliance more affordable for property owners across Coventry.',
+                    },
+                    {
+                        question: 'What areas do you cover for fire door services?',
+                        answer: 'We provide fire door installation and maintenance throughout Coventry and surrounding areas, covering CV and B postcodes. Contact us to confirm we service your specific location.',
+                    },
+                    {
+                        question: 'Do you provide fire door maintenance as well as installation?',
+                        answer: 'Yes, we offer comprehensive fire door maintenance services. Our expert team conducts thorough inspections of seals, hinges, and closing mechanisms, performs necessary repairs, and provides detailed compliance reports to ensure ongoing protection.',
+                    },
                     ]}
                 />
 
                 <FinalCtaSection
-                    title="A Warmer, More Efficient Home"
-                    titleEmphasis="Starts Today"
-                    subtitle="Avoid winter breakdowns. Get a fixed-price quote, fast installation, and expert local service you can trust."
-                    primaryCta="Get My Fixed Quote"
+                    title="Ready to Get Started?"
+                    titleEmphasis="Ready to Ensure Your Property is Fire Safe and Compliant?"
+                    subtitle="Get your free fire door installation or maintenance quote today. FIRAS accredited service installed within 48 hours. Finance options available."
+                    primaryCta="Get Your Free Quote Today"
                     phoneCta={phone}
-                    trustBadges={['✔ No obligation', '✔ Fixed pricing', '✔ Fast install', '✔ Local experts']}
+                    trustBadges={["Gas Safe Registered", "170+ 5★ Reviews", "Finance Available", "5-Year Warranty"]}
                 />
+
+                <MobileStickyCta phone={phone} phoneDisplay={phoneDisplay} />
             </main>
 
-            <LandingPageFooter brandName={brandName} phone={phone} phoneDisplay={phoneDisplay} />
-
-            <MobileStickyCta phone={phone} label="Tap to Call Now" />
+            <LandingPageFooter
+                brandName={brandName}
+                phone={phone}
+                phoneDisplay={phoneDisplay}
+                address="Serving Coventry & Surrounding Areas (CV & B Postcodes)"
+                certifications={["FIRAS Accredited", "Gas Safe Registered", "Constructionline Gold", "DBS Checked"]}
+            />
         </>
     );
 }
